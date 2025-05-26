@@ -1,14 +1,7 @@
+from AltinoLite import *       # ✅ AltinoLite 함수 사용
 import speech_recognition as sr
-import serial
-import time
 
-# ✅ Altino 연결 (COM5, 9600bps)
-try:
-    altino = serial.Serial('COM5', 9600)
-    print("✅ Altino LITE 연결 성공")
-except Exception as e:
-    altino = None
-    print("❌ Altino 연결 실패:", e)
+Open("COM3")   # COM5는 Bluetooth SPP 포트
 
 recognizer = sr.Recognizer()
 
@@ -23,16 +16,14 @@ try:
 
     if "사과" in result:
         print("✅ 정답! 전진")
-        if altino:
-            altino.write(b'F\n')  # ✅ 개행 포함
-            time.sleep(1)
-            altino.write(b'S\n')
+        Go(500, 500)     # AltinoLite의 전진 명령
+        delay(1000)
+        Stop()
     else:
         print("❌ 오답. 좌회전")
-        if altino:
-            altino.write(b'L\n')
-            time.sleep(1)
-            altino.write(b'S\n')
+        Go(-300, 300)
+        delay(1000)
+        Stop()
 
 except sr.UnknownValueError:
     print("❌ 음성을 이해할 수 없습니다.")
@@ -40,3 +31,5 @@ except sr.RequestError as e:
     print(f"❌ Google API 오류: {e}")
 except Exception as e:
     print("❌ 음성 인식 중 오류 발생:", e)
+
+Close()   # AltinoLite 함수로 마무리
