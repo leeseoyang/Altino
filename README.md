@@ -1,5 +1,5 @@
 ﻿<p align="center">
-  <img src="images/banner.png" alt="Altino Banner" width="800"/>
+  <img src="[images/banner.png](https://github.com/leeseoyang/Altino/commit/6c184782c6e3648d0d8ffb07c6ebbe21327feca1#diff-ee9f0fd75522af7ce78f210539a80623f8ce9646f71a9067442acf74d84eabe4)" alt="Altino Banner" width="800"/>
 </p>
 
 # 🎤 Altino 음성 인식 제어 시스템 (Python + Toga)
