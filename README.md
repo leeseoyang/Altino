@@ -95,12 +95,4 @@ Altino/
 
 ---
 
-## 🌟 GitHub 활용 팁
-
-* `.gif`로 시연 영상 넣기 → `images/demo_ui.gif`
-* `requirements.txt`로 빠르게 라이브러리 설치
-* 깃허브 상단 ⭐ Star 눌러두면 포트폴리오에서 더 잘 보입니다
-
----
-
 > 🚗 Altino 프로젝트가 도움이 되었다면 `⭐ Star`를 눌러주세요!
