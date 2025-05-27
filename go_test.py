@@ -1,7 +1,7 @@
 import serial
 import time
 
-ports = ['COM4', 'COM5']  # 블루투스 직렬 포트 목록
+ports = ['COM3']  # 블루투스 직렬 포트 목록
 baudrates = [9600, 115200]  # Altino 통신 속도 후보
 commands = [b'F\n', b'f\n', b'1\n', b'F', b'f', b'1']  # 다양한 명령 조합
 
